@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>극장판</title>
+    <style>
+        
+        
+        header{
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+            /*border-bottom: solid 1px white;*/
+            background-color: rgb(255, 255, 61);
+        }
+        #main_img{
+            width: 100%;
+            height: 100px;
+            /*background-image: url(image/water2.jpg);*/
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-top: 0px;
+        }
+        
+
+        #main_menu li {
+            font-size: 18px; /* 메뉴 항목의 글꼴 크기를 크게 조절 */
+            display: inline;
+            margin-left: 20px; /* 메뉴 항목 간격을 줄임 */
+            transition: color 0.3s;
+            background-color: 0.3s; /* 전환 효과에 배경색 추가 */
+            color: black;
+        }
+
+        #main_menu li:hover {
+            color: rgb(255, 145, 0);
+            background-color: rgb(255, 255, 255);
+        }
+
+        #main_menu  a {
+            text-decoration: none;  /* 밑줄 제거 */
+            color: inherit;  /* 링크 색깔을 상위 요소의 색깔로 상속 */
+        }
+
+        #main_menu a:hover {
+            color: inherit;
+            color: rgb(255, 145, 0); 
+            text-decoration: none;
+        }
+        #contents {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 150px; 
+            font-size: 22px;
+            text-align: center;
+        }
+
+        #main_contents {
+        width: 80%; /* 콘텐츠의 너비를 조절 */
+        height: 100%;
+        margin: 20px auto;
+        }
+       
+        #main_contents .p2 {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            color: rgba(255, 255, 255, 0.58);
+            text-align: center;
+        }
+
+        #main_contents img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #menus{
+            float: right;
+            /*border: solid 1px red;*/
+        }
+        
+        #main_menu{
+            clear: both;
+            margin-top: 0px;
+            margin-right: 40px;
+            font-family: '맑은고딕';
+            font-size: 20px;
+            color: black;
+            background-color: transparent;
+            padding-top: 29px;
+            font-size: 18px;
+        }
+        #main_menu li{
+            font-size: 18px;
+            display: inline;
+            margin-left: 80px;
+            padding: 10px 20px;
+        }   
+        
+
+
+
+
+        footer {
+            width: 100%;
+            height: 150px;
+            margin-top: 30px; /* 푸터와 상단의 간격을 조절 */
+            background-color: rgba(255, 255, 255, 0.457);
+            bottom: 0;
+            left: 0;
+        }
+
+        #footer_box {
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+            position: relative; /* 푸터의 위치를 상대적으로 지정 */
+        }
+
+        #footer_logo{
+            float: left;
+            margin: 60px 0 0 30px;
+        }
+
+        #adress{
+            float: right;
+            margin: 60px 30px 0 0;
+            color: white;
+        }
+
+
+
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background-size:contain;
+            background-image:url(./image/backgroundfin.png);
+            background-repeat: repeat;
+            font-family: '돋움';
+            font-size: 14px;
+            color: white;
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        li{
+            list-style-type: none;
+        }
+
+        #logo{
+            float: left;
+            margin: 10px 0 0px 20px;
+            /*border: solid 1px red;*/
+        }
+
+
+        .p2{
+            font-size: 20px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+       
+
+        .p18{
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .p18 img {
+            width: 50%; /* 이미지가 부모의 50%만큼 너비를 가지도록 설정 */
+            float: left;
+        }
+        .p3{
+            text-align: left;
+            font-size: 30px;
+            /*text-align: center; /*
+            margin-left: 20px; /* 원하는 여백 조절 */
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.454);
+            font-style: italic;
+        }
+        .p4 {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.58);
+            line-height: 1.7;
+            background-color: rgba(128, 128, 128, 0.728);
+            padding: 20px; /* 일관된 여백 조절 */
+            text-align: left; /* 가운데 정렬 */
+            display: inline-block; /* 인라인 블록 요소로 설정 */
+            border-top: dashed 3px white;
+        }
+        .p5 {
+            margin-bottom: 10px;
+            margin-top: 16px;
+            text-align: left;
+            font-size: 15px;
+            display: block; /* 블록 요소로 설정하여 다음 줄에 위치하도록 함 */
+        }
+        .p6 {
+            font-size: 20px;
+            background-color: rgba(54, 54, 255, 0.5);
+            padding: 20px;
+            width: 100%; /* 변경된 부분: 내용에 맞게 조절할 넓이를 특정 값(예: 80%)으로 지정합니다. */
+            margin: 0 auto;
+            display: block; /* 변경된 부분: 블록 요소로 설정합니다. */
+        }  
+
+        .p7{
+            text-align: left;
+            font-size: 35px;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.687);
+            font-weight: bold;
+            float: left;
+        }
+
+        .p8{
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.687);
+            float: left;
+        }
+        
+        table{
+           /* border: rgb(177, 177, 177) 1px solid;*/
+            width: 1100px;
+            width: 100%
+        }
+        th, td {
+            width: 20%; /* 테이블의 각 셀이 전체 너비의 20%를 차지하도록 설정 */
+            height: 30px; /* 적절한 높이를 설정 */
+            padding: 6px;
+            text-align: center;
+            color: black;
+            font-size: 15px;
+        }
+
+        #num{
+            background-color:  rgb(249, 249, 141);
+        }
+        #name{
+            background-color: white;
+            font-size: 15px;
+        }
+      
+        .movie-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <div id="logo">
+            <a href="index.html"><img src="./image/conanlogo.png" width="160px"></a>
+        </div>
+        <nav id="menus">
+            <ul id="main_menu">
+                <li><a href="a.html">주요 소재</a></li>
+                <li><a href="aa.html">등장인물</a></li>
+                <li><a href="aaa.html">극장판</a></li>
+                <li><a href="aaaa.html">명대사</a></li>
+                <li><a href="aaaaa.html">TMI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main_img">
+    </section>
+    <section id="contents">
+            <div id="main_contents">
+                <span class="p7">역대 극장판</span><br><br>
+                <span class="p8">극장판 시리즈 내에서도 원작과 세계관을 공유하며, 추리와 액션을 조합한 형태로 
+                대체로 스케일이 크다.<br>애니메이션 극장판임에도 불구하고 성인들에게도 인기가 많고, 
+                성인 관객들의 비중이 다른 애니메이션 극장판에 비해 많다.</span> 
+                <br><br><br>
+                <p>
+                    <table>
+                        <tr id="num">
+                            <th>1기</th>
+                            <th>2기</th>
+                            <th>3기</th>
+                            <th>4기</th>
+                            <th>5기</th>
+                        </tr>
+                        <tr id="name">
+                            <td>시한장치의 마천루</td>
+                            <td>14번째 표적</td>
+                            <td>세기말의 마술사</td>
+                            <td>눈동자 속의 암살자</td>
+                            <td>천국으로의 카운트다운</td>
+                        </tr>
+                        <tr id="num">
+                            <th>6기</th>
+                            <th>7기</th>
+                            <th>8기</th>
+                            <th>9기</th>
+                            <th>10기</th>
+                        </tr>
+                        <tr id="name">
+                            <td>베이커가의 망령</td>
+                            <td>미궁의 십자로</td>
+                            <td>은빛 날개의 마술사</td>
+                            <td>수평선상의 음모</td>
+                            <td>탐정들의 진혼가</td>
+                        </tr>
+                        <tr id="num">
+                            <th>11기</th>
+                            <th>12기</th>
+                            <th>13기</th>
+                            <th>14기</th>
+                            <th>15기</th>
+                        </tr>
+                        <tr id="name">
+                            <td>감벽의 관</td>
+                            <td>전율의 악보</td>
+                            <td>칠흑의 추적자</td>
+                            <td>천공의 난파선</td>
+                            <td>침묵의 15분</td>
+                        </tr>
+                        <tr id="num">
+                            <th>16기</th>
+                            <th>17기</th>
+                            <th>18기</th>
+                            <th>19기</th>
+                            <th>20기</th>
+                        </tr>
+                        <tr id="name">
+                            <td>11번째 스트라이커</td>
+                            <td>절해의 탐정</td>
+                            <td>이차원의 저격수</td>
+                            <td>화염의 해바라기</td>
+                            <td>순흑의 악몽</td>
+                        </tr>
+                        <tr id="num">
+                            <th>21기</th>
+                            <th>22기</th>
+                            <th>23기</th>
+                            <th>24기</th>
+                            <th>25기</th>
+                        </tr>
+                        <tr id="name">
+                            <td>진홍의 연가</td>
+                            <td>제로의 집행인</td>
+                            <td>감청의 권</td>
+                            <td>비색의 탄환</td>
+                            <td>할로윈의 신부</td>
+                        </tr>
+                        <tr id="num">
+                            <th>26기</th>
+                            <th>27기(개봉 예정)</th>
+                            <th colspan="3">콜라보</th>
+                        </tr>
+                        <tr id="name">
+                            <td>흑철의 어영</td>
+                            <td>100만 달러의 오릉성</td>
+                            <td>루팡VS코난 THE MOVIE</td>
+                            <td>코난 실종사건</td>
+                            <td>-</td>
+                        </tr>
+                        <tr id="num">
+                            <th colspan="2">TV스페셜</th>
+                            <th colspan="3">총편집</th>
+                        </tr>
+                        <tr id="name">
+                            <td>에피소드 원</td>
+                            <td>진홍의 수학여행</td>
+                            <td>비색의 부재증명</td>
+                            <td>본청 형사의 사랑 이야기</td>
+                            <td>흑철의 미스터리 트레인</td>
+                        </tr>
+                    </table><br><br><br>
+                    <span class="p7">100만 달러의 오릉성</span><br><br>
+                        <span class="p8">2024년 4월 12일 개봉 예정</span>
+                        <br><br>
+                            <div class="movie-images">
+                                <img src="./image/movie.jpg" width="450px">
+                                <img src="./image/movie2.jpg" width="450px">
+                            </div><br>
+                                <video src='./image/100movie.mp4' height='500px' controls loop></video>
+                                <span class="p4">たった一つの真実見抜く見た目は子供、頭脳は大人。その名は、名探偵コナン！
+                                    <br>
+                                    홋카이도의 하코다테에 있는 도검 재벌의 깊은 창고에 괴도 키드로부터의 예고장이 도착한다. 이번에 키드가 노리는 것은,
+                                    <br>
+                                    막부 말기를 살았던 신선조 부장 히지카타 토시조에 얽힌 일본도라고 한다.
+                                    <br>
+                                    빅 쥬얼을 추구하는 키드가 왜 칼을 노리는건가...?
+                                    <br>
+                                    한편, 서쪽의 명탐정 핫토리 헤이지와 코난 일행도 하코다테에서 개최되는 검도대회를 위해 현지를 방문하고 있었으며,
+                                    <br>
+                                    범행 예고 당일, 헤이지가 키드의 변장을 멋지게 알아채고 몰아붙이는데...!?
+                                    <br>
+                                    같은 시간, 가슴에 열 글자의 베인 상처가 난 시신이 하코다테 창고 거리에 발견된다.
+                                    <br>
+                                    수사 선상에 떠오른 것은 "죽음의 상인"이라 불리며 아시아 일대에서 무기 상인으로 활동하는 일본계 미국인 남자.
+                                    <br>
+                                    그는 전시 군수산업에 깊이 관여했던 오노에 집안 초대 당주가 하코다테 어딘가 숨겼다고 알려진 보물을 찾고 있었다.
+                                    <br>
+                                    그것은 당시 일본의 패색이 짙었던 전황을 확 바꿀 정도의 강력한 무기라는 소문도...
+                                    <br>
+                                    그리고 그 보물과 키드가 노리는 칼은 아무래도 관계가 있는 듯하고, 칼을 노리는 키드에게
+                                    <br>
+                                    수수께끼의 "검사"의 그림자가 다가오는데...</span>
+                                
+                        
+            </div>
+    </section>
+    <div class="clear">
+    <footer>
+        <div id="footer_box">
+            <div id="footer_logo">
+                <img src="./image/conanlogo.png" width="80px">
+            </div>
+            <ul id="adress">
+                <li>&copy; Copyright© 2023. 名探偵コナン めいたんていコナン All Rights Reserved. </li>
+                <li> E-mail jyunlee5345@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
